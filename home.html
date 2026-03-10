@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gourmet Bistro - Exquisite Flavors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#fcf9f7",
+                        "background-dark": "#211111",
+                        "accent-green": "#2d8a4e",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background-color: rgba(252, 249, 247, 0.9);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#181111] font-display">
+<!-- Sticky Navigation Bar -->
+<nav class="sticky-nav border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<h1 class="text-xl font-extrabold tracking-tight">Gourmet<span class="text-primary">Bistro</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-gray-700">search</button>
+<button class="material-symbols-outlined text-gray-700">shopping_bag</button>
+</div>
+</nav>
+<!-- Sub-navigation Tabs -->
+<div class="bg-background-light px-4 overflow-x-auto hide-scrollbar border-b border-gray-100">
+<div class="flex gap-8 py-3 min-w-max">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="text-gray-500 font-medium hover:text-primary transition-colors" href="#menu">Menu</a>
+<a class="text-gray-500 font-medium hover:text-primary transition-colors" href="#">Booking</a>
+<a class="text-gray-500 font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-[420px] flex items-center justify-center text-center px-6 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="High-end restaurant interior with ambient lighting" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFLltmkwq_0CHdOv9NGZ2U4piD3m0Pe2ImY88mMgEJoZjD4cxl3K8rOOMpAG-uVWQ9fw1W-UIhRN3SEOZZavSH2jCH5oius-ZyJ-N--iXygtOIbgfdjvPiJHJW9xKNhXzMEMZkWWHFBSn0-n3bWicsz-Kh9PmjCAKYaQ_lZUIKwAwMx4FzZ3GkIFvPWk4mJjbJlJJW-pv1ZztZIBMNJLVq9bCZhsgY556csy8vMYphJ7CUO-cLzw3g447K4AfW55Ps8Yx6WOxvsfmN')"></div>
+<div class="relative z-10 space-y-4">
+<h2 class="text-white text-4xl font-black leading-tight">Exquisite Flavors, Unforgettable Moments</h2>
+<p class="text-white/90 text-base max-w-xs mx-auto">Experience the finest gourmet cuisine in a modern atmosphere.</p>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+                Book a Seat
+            </button>
+</div>
+</section>
+<!-- Digital Menu Section -->
+<section class="px-4 py-8" id="menu">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold">Our Digital Menu</h2>
+<span class="material-symbols-outlined text-primary">restaurant_menu</span>
+</div>
+<!-- Menu Categories Chips -->
+<div class="flex gap-3 overflow-x-auto hide-scrollbar mb-8">
+<button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Starters</button>
+<button class="bg-white border border-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Main Course</button>
+<button class="bg-white border border-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Desserts</button>
+<button class="bg-white border border-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Drinks</button>
+<button class="bg-white border border-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Specials</button>
+</div>
+<!-- Menu Grid -->
+<div class="space-y-4">
+<!-- Menu Item 1 (Special) -->
+<div class="relative bg-white rounded-xl shadow-sm border border-primary/5 p-3 flex gap-4 overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Special</div>
+<div class="w-24 h-24 shrink-0 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="Truffle mushroom pasta dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxuwqU_OaumGbqTkrbK1soC0oM6hjZZTVE81PhBML7OInOxclxxy2rWYMn92kgjSPPvGsNEi3u6G39e19hce7Ag28SLmNBVhmSoaSdaJ8rttG8tWk4rX6oB-mZwQL8UIgtDI3pzR1pw4P9VZagYcsIymVAlTRD7XZ7btYGX7zDAFOf4g_ylfGDXMj8xHlbd1zFe8woB6G8gW9PMCRcfVsP47wu90CVHxWzebPSGUnSq2BxhC6g5y5vxAUHAOrl52ZAZ2Hr33RZMtwi"/>
+</div>
+<div class="flex flex-col justify-between py-1 pr-8">
+<div>
+<h3 class="font-bold text-gray-900">Truffle Tagliatelle</h3>
+<p class="text-xs text-gray-500 line-clamp-2 mt-1">Handmade pasta with black truffle cream and wild mushrooms.</p>
+</div>
+<p class="text-primary font-bold">$24.00</p>
+</div>
+</div>
+<!-- Menu Item 2 (Healthy) -->
+<div class="relative bg-white rounded-xl shadow-sm border border-primary/5 p-3 flex gap-4 overflow-hidden">
+<div class="absolute top-0 right-0 bg-accent-green text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Healthy</div>
+<div class="w-24 h-24 shrink-0 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="Fresh salmon quinoa bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xRiVZUa_qn_cTe7io-O79OrQB5z5n9fcg_sy_tdehyb6o1bXgeA4kgY3ZzzFArq8ZYHZorS6zbhnN81Dvir4UQGVkR4NjHIAsnthDXlHEUhy-TAcb8UHWf_UDkMiw8LO0Twp_WHETY6Xf5wlviNan3TtXCy2ILJJeN_sCz3fzRiirqtga5c-hucTXsxTus_y3RcLw4tfWymomyH4B8hMvR0AZVohp5PNid5DK1yz1FY-P7bLl-Eul9Ok7r1VZL0r4dYyvKlYB0yk"/>
+</div>
+<div class="flex flex-col justify-between py-1 pr-8">
+<div>
+<h3 class="font-bold text-gray-900">Quinoa Salmon Bowl</h3>
+<p class="text-xs text-gray-500 line-clamp-2 mt-1">Atlantic salmon, organic quinoa, avocado, and citrus dressing.</p>
+</div>
+<p class="text-primary font-bold">$18.50</p>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="bg-white rounded-xl shadow-sm border border-primary/5 p-3 flex gap-4 overflow-hidden">
+<div class="w-24 h-24 shrink-0 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="Classic bruschetta with tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ZaHbA2Mk8faC56aeqCQfAvOb_5AiyKdWcAQ0NdmNdqVG4deTL7T2MhmTOT_KLsrW1XP5kn4xqJXiKPXi6-dw8oS4lSEYXyKlaCQzNThmxfGGOR30QAvFXJ77L_fTGNXOpM0z6a23lh-wQA-MtfKjkmiC6ltuw_7NX5P7WLMYrHhqCn8tjCQuBl_-ceJf4_Lg_dvMiUMOcuuOUj8WeyyTrAElWe_iiugC84IlN6zqkZQmL6zy8HGURp47DT-8MKtXPrvAy53T-ZTJ"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h3 class="font-bold text-gray-900">Classic Bruschetta</h3>
+<p class="text-xs text-gray-500 line-clamp-2 mt-1">Toasted sourdough, heirloom tomatoes, basil, and balsamic glaze.</p>
+</div>
+<p class="text-primary font-bold">$12.00</p>
+</div>
+</div>
+<!-- Menu Item 4 (Special) -->
+<div class="relative bg-white rounded-xl shadow-sm border border-primary/5 p-3 flex gap-4 overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Chef's Choice</div>
+<div class="w-24 h-24 shrink-0 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="Grilled lamb chops dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0S3ArHtxAs2TJyjTD5gMaRlVvWEBzfSJ8oAaor-DqIdd3GKgrrTi8dd1N75cFpKMk7Q23OBjXiXELTdJ9CIWTo5eF26pDuU3gbJrbCMiCAh-QxOR7BvN8oDDz0V0L6ITMZEEtiMbOFJBek3AchbBirPlHW95FaFlN220B6gMu_R6Kvtj0KtpE3R-Bop6TcupMBA_VuA3jGpibdoH2bPjebdUM8s6Na8vQj7Q_wcBkN2LKh2UGGMIy2nH1ccgRlVMdrXxPcCbdNQ0N"/>
+</div>
+<div class="flex flex-col justify-between py-1 pr-8">
+<div>
+<h3 class="font-bold text-gray-900">Herb-Crusted Lamb</h3>
+<p class="text-xs text-gray-500 line-clamp-2 mt-1">Slow-roasted lamb chops served with mint jus and baby carrots.</p>
+</div>
+<p class="text-primary font-bold">$32.00</p>
+</div>
+</div>
+<!-- Menu Item 5 (Healthy) -->
+<div class="relative bg-white rounded-xl shadow-sm border border-primary/5 p-3 flex gap-4 overflow-hidden">
+<div class="absolute top-0 right-0 bg-accent-green text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Vegan</div>
+<div class="w-24 h-24 shrink-0 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover" data-alt="Assorted garden salad bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmkUiB4D9GYQGgWj_DOnCE0QsdHc2qibWhCqLFOKWk9Uc3z69ym520VJu8BCrasERxUaoOPogqAlq7ngRFinieioTxQeKq-YCn1gAZFjndLNc5HLqwu4JgOkeWTONEfsXiISEErwvh4kdq-ekSTUBIoTlYCA8Cv8XtXhROVodOYxw65NI03J0F2ZGtmQggrxgmbh6bgrfNOQJkFhWkVCKvqf8l82ara5qcm7WiLGBq6OPwwoVquyGzymWYoSZ46DRafcaSZqawQWhL"/>
+</div>
+<div class="flex flex-col justify-between py-1 pr-8">
+<div>
+<h3 class="font-bold text-gray-900">Garden Harvest</h3>
+<p class="text-xs text-gray-500 line-clamp-2 mt-1">Locally sourced seasonal greens with house-made vinaigrette.</p>
+</div>
+<p class="text-primary font-bold">$14.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="bg-primary/5 mx-4 mb-24 rounded-2xl p-6 text-center">
+<h3 class="text-xl font-bold mb-2">Planning a Dinner?</h3>
+<p class="text-gray-600 text-sm mb-4">Secure your favorite table in just a few taps.</p>
+<button class="bg-primary text-white w-full py-3 rounded-lg font-bold">Reserve Now</button>
+</section>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 flex items-center justify-around py-3 px-2 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1]">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Menu</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Booking</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</body></html>
