@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .ios-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-30 bg-white/80 dark:bg-background-dark/80 ios-blur border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 py-3">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-center flex-1 pr-8">Checkout</h1>
+</div>
+<!-- Step Progress Bar -->
+<div class="px-6 pb-4 pt-2">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Booking Info</span>
+<span class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Payment</span>
+</div>
+<div class="relative h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 50%;"></div>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto p-4 space-y-6 pb-32">
+<!-- Summary Card -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase">Reservation Summary</h2>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Pending</span>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-lg bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">The Golden Fork</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Italian Cuisine • Fine Dining</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-slate-50 dark:border-slate-800">
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-slate-400">Selected Seat</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">chair_alt</span>
+<p class="font-semibold text-sm">Table 12 (Window)</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-slate-400">Date &amp; Time</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">calendar_today</span>
+<p class="font-semibold text-sm">Oct 24, 7:30 PM</p>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-slate-600 dark:text-slate-400 font-medium">Reservation Fee</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">$15.00</span>
+</div>
+</section>
+<!-- Guest Form -->
+<section class="space-y-4">
+<h2 class="text-lg font-bold px-1">Guest Details</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 space-y-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Full Name</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400 transition-all" placeholder="Johnathan Doe" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Phone Number</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Email Address</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Special Requests</label>
+<textarea class="w-full h-24 bg-slate-50 dark:bg-slate-800 border-none rounded-lg p-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400 resize-none" placeholder="Any dietary restrictions or seating preferences?"></textarea>
+</div>
+</div>
+</section>
+<!-- Payment Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-lg font-bold">Secure Payment</h2>
+<div class="flex items-center gap-1.5 text-[10px] font-bold text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                    ENCRYPTED
+                </div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 space-y-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Card Number</label>
+<div class="relative">
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 pr-12 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1">
+<img alt="Visa" class="h-4" data-alt="Visa payment network logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFtYj1ED17CwCnMaeZ8P0np9WZ_dIFwIszpJUR0xtbaObBh_Z7-NVeC6yinqdPcRJlTQkm173FCj51XoY0e51s2BMgWYUJjiLE0GGO8WcZRYtavT7WrOnkuoTznt9vXHMagwopO9nzeVMT9-CaaVgOrnAA5MkqBuzAehPPNbEl6N50BebE5NnN-qEUh6XcZu_4Um4Wmf2j3lCTsC2W29AJvv2jLLSgKbR6LlSRfNi_fprUMjrnN0LxjkgsVBokXur9RqA_J_caUYK3"/>
+<img alt="Mastercard" class="h-4" data-alt="Mastercard payment network logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9vZ4Nsl21eG8LSPKj7bwI8W6PYXOxtPIIavKbKy7YPWw0kN2GaRMPMypRceEGiAOba7Xg2OiJ1F5cEuEw9RKkPMQ11iACRXgtWl9NzqusW6Aqb16lFubwE4gHQdBCdGGyYcL6Qnzt0BTrtgZkgbbGIPS-f9e2K7rjBhml5mnkLC4FTS1B0KRzfWKvIOmMHHhL3kqF3nMbzbU7ROqxkRrF4XwPlJ5Pmam9qCL_wENW15JU5MFLCtS9ZZGFBkwspPOdQBJo1qtBztRT"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">Expiry Date</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-slate-500 uppercase px-1">CVV</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400" placeholder="***" type="password"/>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex flex-wrap justify-center gap-4 pt-4 border-t border-slate-50 dark:border-slate-800 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-[10px] font-bold">SSL SECURE</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span class="text-[10px] font-bold">PCI COMPLIANT</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">credit_score</span>
+<span class="text-[10px] font-bold">FAST CHECKOUT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cancellation Policy -->
+<p class="text-center text-[11px] text-slate-400 px-8">
+            By proceeding, you agree to our <a class="text-primary underline" href="#">Terms of Service</a>. Cancellation within 24 hours of booking may incur a fee.
+        </p>
+</main>
+<!-- Fixed Bottom Action Area -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 ios-blur border-t border-slate-200 dark:border-slate-800 p-4 pb-8 z-40">
+<div class="max-w-md mx-auto space-y-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span>Confirm &amp; Pay $15.00</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation Component (for platform context) -->
+<nav class="fixed bottom-0 hidden w-full flex-col bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex gap-2 px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Search</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">calendar_today</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Bookings</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>
